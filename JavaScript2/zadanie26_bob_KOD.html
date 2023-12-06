@@ -1,0 +1,75 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+function okno_zamknij_bobrowski()
+{
+window.close()
+}
+</script>
+<textarea rows="60" cols="200" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function Pow_bob(dp_bob, gp_bob, h_bob)
+{
+dp=parseFloat(dp_bob)
+gp=parseFloat(gp_bob)
+h=parseFloat(h_bob)
+
+pole=Math.abs(((dp+gp)*h)/2);
+document.getElementsByName('pole')[0].value=pole.toFixed(2);
+alert("Pole="+pole.toFixed(2)+" ");
+pokaz1.innerHTML="Pole="+pole.toFixed(2)+" "+"<br>"; 
+}
+
+function Obw_bob(dp_bob, gp_bob, h_bob)
+{
+dp=parseFloat(dp_bob)
+gp=parseFloat(gp_bob)
+h=parseFloat(h_bob)
+
+rp2=Math.abs(dp-gp);
+rp=(rp2)/2;
+ramie=Math.sqrt(Math.pow(h,2)+Math.pow(rp,2));
+obw=gp+dp+(ramie*2);
+
+document.getElementsByName('obw')[0].value=obw.toFixed(2);
+alert("Obwód="+obw.toFixed(2)+" ");
+pokaz2.innerHTML="Obwód="+obw.toFixed(2)+" "+"<br>"; 
+}
+
+</script>
+Obliczanie pola oraz obwodu trapeza równoramiennego
+<br> <br>
+<form name="formularz" action="..." onsubmit="Pow_bob(this.dp.value,this.gp.value,this.h.value); Obw_bob(this.dp.value,this.gp.value,this.h.value);return false">
+Podaj dolną podstawę=
+<input size="6" name="dp">
+Podaj górną podstawę=
+<input size="6" name="gp">
+Podaj wysokość=
+<input size="6" name="h">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Pole=
+<input size="6" name="pole">
+Obwód=
+<input size="6" name="obw">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
+
+</textarea>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_bobrowski()"/>
+</body>
+</html>

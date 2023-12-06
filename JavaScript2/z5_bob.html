@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Bobrowski 2P</title>
+<center>
+<script language="JavaScript"> 
+document.write("wykonał: Bartosz Bobrowski mój numer w dzienniku 3, czyli mam układ [(3) mod 4=3] układ 4".fontcolor("red").bold().fontsize(7)+"<br>");
+function WinOpen_g1_bobrowski()
+{
+window.open("grafika1_bob.html","okienko_g1","toolbar=no,directories=no,menubar=no,height=300,width=160,top=120,left=10");
+}
+function WinOpen_g2_bobrowski()
+{
+window.open("grafika2_bob.html","okienko_g2","toolbar=no,directories=no,menubar=no,height=300,width=160,top=120,left=200");
+}
+function WinOpen_g3_bobrowski()
+{
+window.open("grafika3_bob.html","okienko_g3","toolbar=no,directories=no,menubar=no,height=300,width=160,top=120,left=400");
+}
+function WinOpen_g4_bobrowski()
+{
+window.open("grafika4_bob.html","okienko_g4","toolbar=no,directories=no,menubar=no,height=300,width=160,top=120,left=600");
+}
+function okno_zamknij_bobrowski()
+{
+window.close()
+}
+</script>
+</center>
+</head>
+<body>
+<center>
+<form>
+<input type="button_g1" name="grafika1" value="grafika1" onclick="WinOpen_g1_bobrowski(' ')">
+<input type="button_g2" name="grafika2" value="grafika2" onclick="WinOpen_g2_bobrowski(' ')">
+<input type="button_g3" name="grafika3" value="grafika3" onclick="WinOpen_g3_bobrowski(' ')">
+<input type="button_g4" name="grafika4" value="grafika4" onclick="WinOpen_g4_bobrowski(' ')"><br>
+<br>
+<br>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_bobrowski()"/>
+</form>
+</center>
+</body>
+</html>

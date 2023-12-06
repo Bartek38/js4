@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+function okno_zamknij_bobrowski()
+{
+window.close()
+}
+</script>
+<textarea rows="28" cols="200" readonly>
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:blue;font-size:28px;">
+<script language="JavaScript">
+var A=prompt("A=","");
+var B=prompt("B=","");
+
+var a=parseFloat(A);
+var b=parseFloat(B);
+
+document.write("A="+A+"   B="+B+""+"<br><br>");
+
+
+var a1 = (a*a*a);
+var aab = 3*(a*a)*b;
+var abb = 3*a*(b*b);
+var b1 = (b*b*b);
+var wynik = (a+b)*(a+b)*(a+b);
+
+document.write("("+A+" + "+B+" )^3="+A+"^3 + 3*(("+A+")^2)*("+B+")+3*("+A+")*(("+B+")^2) + "+B+"^3="+a1+"+"+aab+"+"+abb+"+"+b1+"="+wynik+" "+"<br>");
+</script>
+</div>
+</body>
+</html>
+</textarea>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_bobrowski()"/>
+</body>
+</html>

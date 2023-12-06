@@ -1,0 +1,69 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+function okno_zamknij_bobrowski()
+{
+window.close()
+}
+</script>
+<textarea rows="54" cols="200" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function Wysokosc_bob(odl_bob, s_bob)
+{
+a=parseFloat(odl_bob)
+b=parseFloat(s_bob)
+
+h_bob=Math.abs(Math.sqrt(Math.pow(b,2)-Math.pow(a,2)));
+document.getElementsByName('wysokosc')[0].value=h_bob.toFixed(2);
+alert("Wysokość samolotu(nad Daiwdem)="+h_bob.toFixed(2)+" ");
+pokaz1.innerHTML="Wysokość samolotu(nad Dawidem)="+h_bob.toFixed(2)+" "+"<br>"; 
+}
+
+function Kat_bob(odl_bob, s_bob)
+{
+a=parseFloat(odl_bob)
+b=parseFloat(s_bob)
+Cosinus_alfa=a/b;
+radiany_bob=Math.acos(Cosinus_alfa);
+stopnie_bob=(radiany_bob*180)/Math.PI;
+
+document.getElementsByName('kat')[0].value=stopnie_bob.toFixed(2);
+alert("Kąt startu samolotu="+stopnie_bob.toFixed(2)+" ");
+pokaz2.innerHTML="Kąt startu samolotu="+stopnie_bob.toFixed(2)+" "+"<br>"; 
+}
+
+</script>
+Obliczanie wysokości i kąta startu samolotu
+<br> <br>
+<form name="formularz" action="..." onsubmit="Wysokosc_bob(this.a.value,this.b.value); Kat_bob(this.a.value,this.b.value);return false">
+Podaj odległość między Arturem i Dawidem=
+<input size="6" name="a">
+Podaj odległość jaką przebył samolot=
+<input size="6" name="b">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Wysokość samolotu(nad Dawidem)=
+<input size="6" name="wysokosc">
+Kąt startu samolotu=
+<input size="6" name="kat">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
+
+</textarea>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_bobrowski()"/>
+</body>
+</html>

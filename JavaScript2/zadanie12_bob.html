@@ -1,0 +1,22 @@
+<html>
+	<body>
+	<div style="color:green;font-size:51px;">
+	<script language="JavaScript">
+	var D1_bob=prompt("D1_bob=","");
+	var G1_bob=prompt("G1_bob=","");
+	var D2_bob=prompt("D2_bob=","");
+	var G2_bob=prompt("G2_bob=","");
+	var Ilosc_sekund;
+	var ilosc_sekund_godzin;
+	var a=parseFloat(D1_bob);
+	var b=parseFloat(G1_bob);
+	var c=parseFloat(D2_bob);
+	var d=parseFloat(G2_bob);	
+	Ilosc_sekund=(a-c)*86400;
+	ilosc_sekund_godzin=(b-d)*3600;
+	ogolna_ilosc=Ilosc_sekund+ilosc_sekund_godzin;
+	document.write("Ilość sekund="+a+" + "+c+"*86400 = "+Ilosc_sekund+"+"+ilosc_sekund_godzin+"="+ogolna_ilosc+"<br>");
+	</script>
+	</div>
+	</body>
+</html>

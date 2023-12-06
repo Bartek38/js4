@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+</head>
+<body bgcolor="silver">
+<div style="color:blue;font-size:28px;">
+<script language="JavaScript">
+var No_bob=prompt("No=","");
+var t_bob=prompt("t=","");
+var T1_bob=prompt("T1/2=","");
+
+var no=parseFloat(No_bob);
+var t=parseFloat(t_bob);
+var T1=parseFloat(T1_bob);
+
+var lambda = Math.log(2)/T1;
+var N = no*Math.pow(Math.E,(-lambda*t));
+
+
+document.write("NO="+no+"[sztuk] <br>");
+document.write("t="+t+"[lat] <br>");
+document.write("T1/2="+T1+"[lat] <br>");
+document.write("Lambda="+lambda.toFixed(7)+"[1/rok] <br>");
+document.write("N="+N.toFixed(7)+"[sztuk] <br>");
+
+</script>
+</div>
+</body>
+</html>

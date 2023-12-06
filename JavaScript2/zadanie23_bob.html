@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function Drabina_bob(a_bob, b_bob)
+{
+D=parseFloat(a_bob)
+X=parseFloat(b_bob)
+Drabina_wynik=Math.sqrt(Math.pow(D,2)+Math.pow(X,2));
+document.getElementsByName('drabina')[0].value=Drabina_wynik.toFixed(2);
+alert("Drabina="+Drabina_wynik.toFixed(2)+" ");
+pokaz1.innerHTML="drabina="+Drabina_wynik.toFixed(2)+" "+"<br>"; 
+}
+
+function Kat_alfa_bob(a_bob, b_bob)
+{
+D=parseFloat(a_bob)
+X=parseFloat(b_bob)
+Tangens_alfa=D/X;
+radiany_bob=Math.atan(Tangens_alfa);
+stopnie_bob=(radiany_bob*180)/Math.PI;
+
+document.getElementsByName('alfa')[0].value=stopnie_bob.toFixed(2);
+alert("Alfa="+stopnie_bob.toFixed(2)+" ");
+pokaz2.innerHTML="Alfa="+stopnie_bob.toFixed(2)+" "+"<br>"; 
+}
+
+</script>
+Obliczanie długości od drabiny i kąta
+<br> <br>
+<form name="formularz" action="..." onsubmit="Drabina_bob(this.d.value,this.x.value); Kat_alfa_bob(this.d.value,this.x.value);return false">
+Podaj d=
+<input size="6" name="d">
+Podaj x=
+<input size="6" name="x">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Drabina=
+<input size="6" name="drabina">
+Alfa=
+<input size="6" name="alfa">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body>
+</html>

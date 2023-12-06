@@ -1,0 +1,53 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+function okno_zamknij_bobrowski()
+{
+window.close()
+}
+</script>
+<textarea rows="40" cols="200" readonly>
+<html>
+<head>
+<script type="text/javascript">
+function dom(kolor_b,mk_b,garaz_b,polozenie_b)//początek konstruktora
+{
+this.kolor=kolor_b;
+this.mk=mk_b;
+this.garaz=garaz_b;
+this.polozenie=polozenie_b;
+}//koniec konstruktora
+dom.prototype.Dom_pokaz_bobrowski = function () //definicja metody
+{
+alert(this.kolor + ' ' + this.mk+ ' ' + this.garaz+ ' ' +this.polozenie);
+};
+var dom1 = new dom("Biały", "200 m^2", "duzy garaz", "obrzeża miasta"); // nowy obiekt dom1
+var dom2 = new dom('Różowy', '150 m^2', 'brak garażu', 'wieś');
+var dom3 = new dom('Niebieski', '250 m^2', 'mały garaż', 'centrum miasta');
+
+dom.data=2020;
+dom.Dom_pokaz_bobrowski=function() {alert('Powstał w: ' + this.data + '')}
+dom1.Dom_pokaz_bobrowski(); // uruchomienie metody Dom_pokaz_bobrowski() dotyczącej domu 1
+dom.Dom_pokaz_bobrowski();
+dom2.Dom_pokaz_bobrowski();
+dom.Dom_pokaz_bobrowski();
+dom3.Dom_pokaz_bobrowski();
+dom.Dom_pokaz_bobrowski();
+
+// poniżej dostęp do pól dom1
+document.write("dom pierwszy"+" "+dom1.kolor+" "+dom1.mk+" "+dom1.garaz+" "+dom1.polozenie+" "+dom.data+"<br>");
+document.write("dom drugi"+" "+dom2.kolor+" "+dom2.mk+" "+dom2.garaz+" "+dom2.polozenie+" "+dom.data+"<br>");
+document.write("dom trzeci"+" "+dom3.kolor+" "+dom3.mk+" "+dom3.garaz+" "+dom3.polozenie+" "+dom.data+"<br>");
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe
+</body>
+</html>
+</textarea>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_bobrowski()"/>
+</body>
+</html>

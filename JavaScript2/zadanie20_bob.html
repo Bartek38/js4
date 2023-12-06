@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function AB_bob()
+{
+var xa_bob= parseFloat(document.getElementById('xa').value);
+var ya_bob= parseFloat(document.getElementById('ya').value);
+var xb_bob= parseFloat(document.getElementById('xb').value);
+var yb_bob= parseFloat(document.getElementById('yb').value);
+var AB;
+AB=Math.sqrt(Math.pow(xa_bob-xb_bob,2)+Math.pow(ya_bob-yb_bob,2));
+
+document.getElementById("nazwa").innerHTML ="Długość boku AB= "+AB.toFixed(2)+" cm";
+
+}
+
+function BC_bob()
+{
+var xb_bob= parseFloat(document.getElementById('xb').value);
+var yb_bob= parseFloat(document.getElementById('yb').value);
+var xc_bob= parseFloat(document.getElementById('xc').value);
+var yc_bob= parseFloat(document.getElementById('yc').value);
+var BC;
+BC=Math.sqrt(Math.pow(xb_bob-xc_bob,2)+Math.pow(yb_bob-yc_bob,2));
+
+document.getElementById("nazwa").innerHTML ="Długość boku BC= "+BC.toFixed(2)+" cm";
+
+}
+
+function AC_bob()
+{
+var xa_bob= parseFloat(document.getElementById('xa').value);
+var ya_bob= parseFloat(document.getElementById('ya').value);
+var xc_bob= parseFloat(document.getElementById('xc').value);
+var yc_bob= parseFloat(document.getElementById('yc').value);
+var AC;
+AC=Math.sqrt(Math.pow(xa_bob-xc_bob,2)+Math.pow(ya_bob-yc_bob,2));
+document.getElementById("nazwa").innerHTML ="Długość boku AC= "+AC.toFixed(2)+" cm";
+
+}
+
+
+</script>
+<br><br>
+Podaj współrzędną x punktu A: <input type="text" id="xa" value=""> <br><br><br>
+Podaj współrzędną y punktu A: <input type="text" id="ya" value=""> <br><br><br>
+Podaj współrzędną x punktu B: <input type="text" id="xb" value=""> <br><br><br>
+Podaj współrzędną y punktu B: <input type="text" id="yb" value=""> <br><br><br>
+Podaj współrzędną x punktu C: <input type="text" id="xc" value=""> <br><br><br>
+Podaj współrzędną y punktu C: <input type="text" id="yc" value=""> <br><br><br>
+<input type="button" name="AB" value="Oblicz długość AB" Onclick="AB_bob()"><br><br>
+<input type="button" name="BC" value="Oblicz Długość BC" Onclick="BC_bob()"><br><br>
+<input type="button" name="AC" value="Oblicz Długość AC" Onclick="AC_bob()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
